@@ -11,4 +11,10 @@ tester.describe('data-sources/memory-source', () => {
         tester.expect(dataSource()).toBe(DataSource.LIST_BEGIN)
         tester.expect(dataSource()).toBe(DataSource.LIST_END)
     })
+
+    tester.it('reports start and end for an empty object', () => {
+        const dataSource = DataSource.Source({})
+        tester.expect(dataSource()).toBe(DataSource.DICTIONARY_BEGIN)
+        tester.expect(dataSource()).toBe(DataSource.DICTIONARY_END)
+    })
 })
