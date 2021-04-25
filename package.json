@@ -10,6 +10,8 @@
     "jest": "^26.6.3"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf node_modules & yarn cache clean",
+    "clean:up": "yarn clean; rm -f yarn.lock"
   }
 }
